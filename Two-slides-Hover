@@ -1,65 +1,97 @@
-<html>
-    <head><title>Learning website</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .a{
-            width:100%;
-            height:100px;
-            background-color:darkblue;
+
+        .outer-div {
+            height: 250px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
         }
-        h1{
-            text-align: center;
-            font-size:xx-large;
-            color:white;
-            padding-top:40px;
+
+        .outer-div:hover .inner-div {
+            animation: liftup 0.3s ease-in-out;
+            top: 0px;
+            cursor: pointer;
         }
-        h2{
-            text-align: center;
-            font-size:x-large;
-            margin-top:40px;
+
+        .outer-div p {
+            font-size: 22px;
+            font-family: arial;
         }
-        p{
-            font-size:25px;
-            margin-top:10px;
-            text-align: center;
+
+        .inner-div1 {
+            position: absolute;
+            height: 125px;
+            width: 200px;
+            background-color: rgba(255, 0, 0, 0.459);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            top: -125px;
         }
-        .btn1{
-            width:100px;
-            height:50px;
-            border:3px solid blue;
-            background-color: blue;
-            margin-top:100px;
-            margin-left:520px;
-            float:left;
+
+        .outer-div:hover .inner-div1 {
+            animation: liftdown 0.4s ease-in-out;
+            top: 0px;
         }
-        .btn2{
-            width:100px;
-            height:50px;
-            border:3px solid blue;
-            background-color: blue;
-            margin-top:100px;
-            margin-right:500px;
-            float:right;
+
+        .outer-div:hover .inner-div2 {
+            animation: liftup 0.4s ease-in-out;
+            top: 125px;
         }
-        a{
-            text-decoration: none;
-            font-size:25px;
-            color:white;
+
+        .inner-div2 {
+            position: absolute;
+            height: 125px;
+            width: 200px;
+            background-color: rgba(255, 0, 0, 0.459);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            top: 250px;
+        }
+        
+        @keyframes liftup {
+            from {
+                top: 250px;
+            }
+            to {
+                top: 125px;
+            }
+        }
+
+        @keyframes liftdown {
+            from {
+                top: -125px;
+            }
+            to {
+                top: 0px;
+            }
         }
     </style>
-    </head>
-    <body>
-        <div class="a"><h1>Welcome To Our Website!</h1></div>
-        <h2>Communication Excellence Starts Here</h2>
-        <p>We help you to improve your communication skills through oral<br>
-            and writing mechanisms.And providing feedback for continuos<br>
-            improvement.Have a great learning!.
-        </p>
-        <button class="btn1"><a href="signup.html">Signup</a></button>
-        <button class="btn2"><a href="login.html">Login</a></button>
-        
-    </body>
+</head>
+<body>
+    <div class="outer-div">
+        <p>HOVER</p>
+        <div class="inner-div1"></div>
+        <div class="inner-div2"></div>
+    </div>
+</body>
 </html>
