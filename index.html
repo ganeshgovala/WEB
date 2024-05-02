@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .outer-div {
+            height: 250px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .outer-div:hover .inner-div {
+            animation: liftup 0.3s ease-in-out;
+            top: 0px;
+            cursor: pointer;
+        }
+
+        .outer-div p {
+            font-size: 22px;
+            font-family: arial;
+        }
+
+        .inner-div {
+            position: absolute;
+            height: 250px;
+            width: 200px;
+            background-color: rgba(255, 0, 0, 0.459);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            top: 250px;
+        }
+
+        .outer-div:hover .inner-div{
+            animation: liftup 0.4s ease-in-out;
+            top: 0px;
+        }
+        
+        @keyframes liftup {
+            from {
+                top: 250px;
+            }
+            to {
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-div">
+        <p>HOVER</p>
+        <div class="inner-div"></div>
+    </div>
+</body>
+</html>
