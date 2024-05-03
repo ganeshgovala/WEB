@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .image {
+            animation: bounce 2.5s infinite alternate ease-in-out;
+        }
+
+        .order {
+            transition-duration: 3s;
+        }
+
+        .order:hover .arrow {
+            display: block;
+            cursor: pointer;
+        }
+
+        .mark {
+            animation: blink 1s steps(2) infinite;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(-5%);
+            }
+
+            to {
+                transform: translateY(5%);
+            }
+        }
+
+        @keyframes blink {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <nav class="bg-white border-gray-200 py-6 flex items-center justify-between px-28">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="Starbucks-logo.png" class="h-16" alt="Flowbite Logo" />
+            </a>
+        </div>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-10 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-white">
+                <li>
+                    <a href="#"
+                        class="text-xl block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white md:dark:text-green-900"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:bg-green-700 md:p-0 dark:text-white md:dark:hover:bg-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:bg-green-700 md:p-0 dark:text-white md:dark:hover:bg-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-xl block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:bg-green-700 md:p-0 dark:text-white md:dark:hover:bg-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="h-[450px] w-screen lg:flex lg:px-20 md:flex md:px-2 max-w-[1450px] mx-auto lg:h-[600px]">
+        <div class="h-full w-full pl-9 pr-7 py-5 md:pl-12 md:w-1/2 lg:w-1/2 lg:pl-0 lg:pr-0 lg:py-0">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl">Start your day with<br> <span
+                    class="font-bold text-green-800 text-6xl md:text-6xl lg:text-9xl">Star Bucks.</span><span
+                    class="mark font-bold text-green-800 text-6xl md:text-6xl lg:text-9xl">l</span></h1>
+            <p class="py-3 text-[#717171] text-md md:pr-3 lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Quasi expedita libero dicta dolore corporis iste? Ipsa itaque nam, eum repellendus aliquam, illum
+                odit dolorem placeat porro reprehenderit, ex perferendis vel.</p>
+            <div class="order py-2 mt-1 px-4 bg-green-800 text-white rounded-xl flex w-fit space-x-3">
+                <button>Order Now</button>
+                <div class="arrow hidden">-></div>
+            </div>
+        </div>
+        <div class="h-0 w-0 lg:w-1/2 lg:h-full md:h-full md:w-1/2 flex items-center justify-center">
+            <img src="hero-image.png" alt="" class="image h-4/5">
+        </div>
+    </main>
+</body>
+
+</html>
