@@ -1,0 +1,123 @@
+<!DOCTYPE html> <!--Declaring the page as a document-->
+<html lang="en">
+    <head>
+        <title>Demo</title>
+        <link rel="icon" type="image/jpeg" href="cat.jpeg">
+        <!--Internal Stylesheet-->
+        <style>
+            img {
+                width: 200px;
+            }
+
+            video {
+                width: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--HEADING-->
+        <h1>Hello World</h1>
+        
+        <!--PARAGRAPH-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Itaque rerum at, enim vitae nesciunt similique maiores, quia accusamus porro minima autem aliquid et maxime voluptatem commodi recusandae ex consequatur possimus.</p>
+
+        <hr> <!--HORIZONTAL ROW-->
+        <br> <!--BREAK THE LINE-->
+
+        <!--This is a pre tag-->
+        <pre>
+            Lorem ipsum dolor sit amet consectetur,  
+            aperiam eligendi laudantium quis eos magni 
+            quaerat tempora ut aspernatur dolores deleniti 
+            accusamus rerum quibusdam obcaecati commod
+        </pre>
+
+        <!--ANCHOR TAG / HYPERLINK-->
+        <a href="https://www.youtube.com/" target="_blank" title="This navigates you to youtube">Click me</a><br><br>
+
+        <!--IMAGE-->
+        <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"><img src="cat.jpeg" alt="this is a cat image"></a>
+
+        <!--VIDEO-->
+        <video src="video.mp4" autoplay controls loop></video>
+
+        <!--TEXT STYLES-->
+        <p>This is a normal text</p>
+        <p>This is a <b>bold</b> text</p>
+        <p>This is a <i>italic</i> text</p>
+        <p>This is a <u>underline</u> text</p>
+        <p>This is a <del>deleted</del> text</p>
+        <p>This is a <big>big</big> text</p>
+        <p>This is a <small>small</small> text</p>
+        <p>This is a <sub>subscript</sub> text</p>
+        <p>This is a <tt>Monospace</tt> text</p>
+        <p>This is a <mark>mark</mark> text</p>
+
+        <br><br>
+
+        <!--UNORDERED LIST-->
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>List 4</li>
+        </ul>
+
+        <!--ORDERED LIST-->
+        <ol>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>List 4</li>
+        </ol>
+
+        <br><br>
+
+        <!--TABLE-->
+        <table>
+            <tr> <!--TABLE ROW 1-->
+                <th>heading1</th> <!--TABLE HEADING 1-->
+                <th>heading2</th> <!--TABLE HEADING 2-->
+                <th>heading3</th> <!--TABLE HEADING 3-->
+                <th>heading4</th> <!--TABLE HEADING 4-->
+            </tr>
+            <tr> <!--TABLE ROW 2-->
+                <td>Des1</td> <!--TABLE DESCRIPTION 1-->
+                <td>Des2</td> <!--TABLE DESCRIPTION 2-->
+                <td>Des3</td> <!--TABLE DESCRIPTION 3-->
+                <td>Des4</td> <!--TABLE DESCRIPTION 4-->
+            </tr>
+            <tr>
+                <td>Des1</td>
+                <td>Des2</td>
+                <td>Des3</td>
+                <td>Des4</td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <!--BUTTON-->
+        <button>Click me</button>
+
+        <br><br>
+
+        <!--FORM-->
+        <form action="">
+            <label for="firstname">First Name : </label>
+            <input type="text" placeholder="john" id="firstname" required> <br>
+            lastname : <input type="text" placeholder="don" required> <br>
+            username : <input type="text" placeholder="johndon22" required> <br>
+            password : <input type="password" required> <br>
+            mobilenumber : <input type="number" required> <br>
+            email : <input type="email" placeholder="xyz@gmail.com"> <br>
+            DOB : <input type="date"> <br>
+            Gender : male<input type="radio" name="gender"> female: <input type="radio" name="gender" checked> <br>
+            Terms and conditions : <input type="checkbox" checked> <br>
+            choose file : <input type="file"> <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <br><br>
+    </body>
+</html>
