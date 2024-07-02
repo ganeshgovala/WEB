@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        :root {
+            --gradient-color1 : linear-gradient(to right, #C04500, #F6CF00);
+            --gradient-color2 : linear-gradient(180deg, #262626 0%, #fff 50%, #262626 100%);
+            --primary-text-color: white;
+            --secondary-text-color: #8C8C8C;
+            --primary-background-color: #0E0E0E;
+            --secondary-background-color: #141414;
+        }
+
+        body {
+            background-color: var(--primary-background-color);
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        /* NAV-BAR */
+
+        nav {
+            height: 100px;
+            width: 100vw;
+            padding: 0px 120px;
+            background-color: #0e0e0e33;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+
+        nav div {
+            height: 100%;
+            width: 35%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 2rem;
+            font-family: "Handlee", cursive;
+            color: #c5c5c5;
+            font-weight: 300;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 70px;
+            float: right;
+        }
+
+        nav li {
+            color: var(--secondary-text-color);
+            list-style: none;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HERO SECTION */
+
+        main {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        main div {
+            height: 650px;
+            width: 47%;
+        }
+
+        #main_left {
+            display: flex;
+            align-items: center;
+            padding-left: 70px;
+        }
+
+        #main_left h1 {
+            background: var(--gradient-color1);
+            background-clip: text;
+            color: transparent;
+            font-size: 6rem;
+        }
+
+        #main_left span {
+            background: var(--gradient-color2);
+            background-clip: text;
+            color: transparent;
+            font-size: 5.9rem;
+        }
+
+        #main_right {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            z-index: 0;
+        }
+
+        #main_right div {
+            width: 110px;
+            background: linear-gradient(180deg,#F6CF00,#C04500);
+            margin-left: 40px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 40px;
+        }
+
+        #main_right div h2 {
+            transform: rotate(-90deg);
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+
+        #decor1 {
+            height: 520px;
+            opacity: 0.6;
+        }
+
+        #decor2 {
+            height: 460px;
+            opacity: 0.5;
+        }
+
+        #decor3 {
+            height: 600px;
+            opacity: 0.7;
+        }
+
+        /* ABOUT */
+
+        #about {
+            height: 500px;
+            width: 100vw;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about div {
+            width: 60%;
+            height: auto;
+            background: var(--gradient-color2);
+            background-clip: text;
+            color: transparent;
+            padding: 60px 0px;
+        }
+
+        #about p {
+            font-size: 28px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /* EDUCATION */
+
+        #Education {
+            height: auto;
+            width: 100vw;
+            padding: 30px 120px;
+        }
+
+        #heading {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            padding: 10px;
+            border-left: 6px solid  var(--secondary-text-color);
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        #Education #table_div {
+            height: auto;
+            width: fit-content;
+            background: var(--gradient-color1);
+            padding: 3px;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        #Education table {
+            width: auto;
+            height: auto;
+            background: var(--secondary-background-color);
+            border-radius: 10px;
+            color: white;
+        }
+
+        tr, th, td {
+            padding: 30px 20px;
+            font-size: 24px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        th, td {
+            border-bottom: 3px solid #3d3d3d;
+            border-right: 3px solid #3d3d3d;
+        }
+
+        /* SKILLS */
+
+        #skills {
+            height: auto;
+            width: 100vw;
+            padding: 80px 120px;
+        }
+
+        #skills_animator {
+            width: 85vw;
+            height: 250px;
+            background: linear-gradient(90deg, #0e0e0e 0%,#ffffff00 35%, #ffffff00 50%,#ffffff00 75%, #0e0e0e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        #skills_animator button {
+            border: none;
+            background-color: #222222;
+            padding: 20px 35px;
+            color: #cdcdcd;
+            font-size: 36px;
+            border-radius: 5px;
+            margin-left: 15px;
+            white-space: nowrap;
+        }
+
+        #slide {
+            white-space: nowrap;
+            z-index: -10;
+            animation: 18s slide infinite linear;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%)
+            }
+        }
+
+        /* PROJECTS */
+
+        #projects {
+            width: 100vw;
+            height: auto;
+            padding: 50px 120px;
+        }
+
+        #projects #container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        #projects .card {
+            height: 400px;
+            width: 250px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            margin-left: 50px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-evenly;
+            color: white;
+            border: 4px solid #131313;
+        }
+
+        #projects .card div {
+            height: 60%;
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #projects .card div img {
+            height: 80%;
+            width: 80%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .card h4 {
+            font-size: 30px;
+            padding: 5px;
+            font-weight: 500;
+        }
+
+        .card ul {
+            padding: 0px 20px;
+        }
+
+        .card li {
+            padding: 2px 0px;
+            color: #808080;
+        }
+
+        /* CONTACT */
+
+        #contact {
+            width: 100vw;
+            height: 600px;
+            padding: 0px 120px;
+        }
+
+        #contact #container {
+            height: 550px;
+            width: 100%;
+            background-color: #1c1c1c;
+            border-radius: 30px;
+            padding: 30px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            gap: 15px;
+        }
+
+        #contact #container h1 {
+            font-size: 56px;
+            font-weight: 500;
+            color: #a3a3a3;
+        }
+
+        #contact #container div .logo {
+            width: 25px;
+        }
+
+        #inner_container div {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #inner_container {
+            height: 70%;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #contact a {
+            color: rgb(162, 162, 162);
+            font-size: 24px;
+        }
+
+        #contact a:hover {
+            background: var(--gradient-color1);
+            background-clip: text;
+            color: transparent;
+        }
+
+        #contact #last {
+            width: 60%;
+        }
+
+        #last img {
+            height: 100px;
+        }
+
+        #last p {
+            color: white;
+            font-size: 18px;
+            font-family: "Handlee", cursive;
+            transform: rotate(-10deg);
+            position: absolute;
+            bottom: 150px;
+            left: 160px;
+        }
+
+        form {
+            display: flex;
+            height: 50px;
+        }
+
+        input {
+            width: 100%;
+            display: inline-block;
+            padding: 0px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #3c3c3c;
+            font-size: 20px;
+            color: white;
+            outline: none;
+        }
+
+        form button {
+            height: 100%;
+            padding: 0px 20px;
+            background-color: #3c3c3c;
+            font-size: 16px;
+            color: white;
+            margin-left: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: black;
+            color: #c3c3c3;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV BAR -->
+    <header>
+        <nav>
+            <div id="nav_left">
+                <h1>GOVALA SRI RAM GANESH</h1>
+            </div>
+            <div id="nav_right">
+                <ul>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#Education"><li>Education</li></a>
+                    <a href="#skills"><li>Skills</li></a>
+                    <a href="#projects"><li>Projects</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main id="home">
+        <div id="main_left">
+            <h1><span>WELCOME TO MY</span> PORTFOLIO</h1>
+        </div>
+        <div id="main_right">
+            <div id="decor1"><h2>PROGRAMMING</h2></div>
+            <div id="decor2"><h2>UI/UX</h2></div>
+            <div id="decor3"><h2>WEBDEVELOPMENT</h2></div>
+        </div>
+    </main>
+
+    <!-- About -->
+    <section id="about">
+        <div>
+            <p>Hello! I’m <b>G Sri Ram Ganesh</b>, a dedicated Computer Science student with a profound passion for technology and innovation. 
+                Currently, I am pursuing 2<sup>nd</sup> year of b.tech in 
+                <b>Vishnu Institute of technology</b>, bhimavaram. This portfolio show cases intrest towards ui/ux, Fullstack webdevelopment and much more.</p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="Education">
+        <div id="heading">EDUCATION</div>
+        <div id="table_div">
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Name of the institution</th>
+                    <th>Place</th>
+                    <th>Year</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>B.TECH</td>
+                    <td>Vishnu Institute of technology</td>
+                    <td>Bhimavaram</td>
+                    <td>23 - 27</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>INTERMEDIATE</td>
+                    <td>Aditya Junior college</td>
+                    <td>Kakinada</td>
+                    <td>21 - 23</td>
+                    <td>96%</td>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>ZPP Govt School</td>
+                    <td>Neelapalli</td>
+                    <td>  - 21</td>
+                    <td>99.5%</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div id="heading">SKILLS</div>
+        <div id="skills_animator">
+            <div id="slide">
+                <button>HTML</button>
+                <button>CSS</button>
+                <button>JAVASCRIPT</button>
+                <button>TAILWIND CSS</button>
+                <button>C</button>
+            </div>
+            <div id="slide">
+                <button>HTML</button>
+                <button>CSS</button>
+                <button>JAVASCRIPT</button>
+                <button>TAILWIND CSS</button>
+                <button>C</button>
+            </div>
+            <div id="slide">
+                <button>HTML</button>
+                <button>CSS</button>
+                <button>JAVASCRIPT</button>
+                <button>TAILWIND CSS</button>
+                <button>C</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div id="heading">PROJECTS</div>
+        <div id="container">
+            <a href="https://my-starbucks-website.glitch.me" target="_blank">
+                <div class="card">
+                    <div><img src="Assets/Starbucks.png" alt=""></div>
+                    <h4>STARBUCKS Clone</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>TAILWIND CSS</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="https://my-netflix-clone.glitch.me" target="_blank">
+                <div class="card">
+                    <div><img src="Assets/Netflix.webp" alt=""></div>
+                    <h4>NETFLIX Clone</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>TAILWIND CSS</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="https://brawny-opaque-dawn.glitch.me" target="_blank">
+                <div class="card">
+                    <div><img src="Assets/Fastrack.png" alt=""></div>
+                    <h4>FASTRACK Clone</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>TAILWIND CSS</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div id="container">
+            <h1><center>Let's Work together!</center></h1>
+            <div id="inner_container">
+                <div>
+                    <img src="Assets/email.svg" alt="Email Logo" class="logo">
+                    <a href="mailto:sriramganesh28@gmail.com"> / sriramganesh28@gmail.com</a>
+                </div>
+                <div>
+                    <img src="Assets/linkedin-in.svg" alt="linkedin-in Logo" class="logo">
+                    <a href="https://www.linkedin.com/in/sri-ram-ganesh-govala-1b95a32a0/"> / Sri Ram Ganesh Govala</a>
+                </div>
+                <div>
+                    <img src="Assets/github.svg" alt="Github Logo" class="logo">
+                    <a href="https://github.com/ganeshgovala"> / ganeshgovala</a>
+                </div>
+                <div>
+                    <img src="Assets/instagram.svg" alt="Instagram Logo" class="logo">
+                    <a href="https://www.instagram.com/ganesh_govala/"> / ganesh_govala</a>
+                </div>
+            </div>
+            <div id="last">
+                <p>Your Feedback Fuels my<br> Journey</p>
+                <img src="Assets/arrow-down.png" alt="">
+                <form>
+                    <input type="text" id="input">
+                    <button id="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2024 G.Sri Ram Ganesh | All right's reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
